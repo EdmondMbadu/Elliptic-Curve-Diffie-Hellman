@@ -74,7 +74,7 @@ public class ECCPrivateKey {
 		ecdhBob.init(privKeyBob);
 		ecdhBob.doPhase(pubKeyAlice, true);
 		
-		// The result( which is converted to hex )  is the same for both Alice and Bob 
+		// The result( the key, which is converted to hex )  is the same for both Alice and Bob 
 		System.out.println("Secret key computed by Alice: 0x"+
 							(new BigInteger(1,ecdhAlice.generateSecret()).toString(16).toUpperCase()));
 		
